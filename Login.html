@@ -10,6 +10,7 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(218, 222, 241);
 }
 
 .topnav {
@@ -32,7 +33,7 @@ body {
 }
 
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: #0b05ac;
   color: white;
 } /* style for navbar */
 
@@ -45,7 +46,7 @@ body {
 
 
         <!-- body header -->
-    <header style="background-color: rgb(245, 155, 206);">
+    <header style="background-color: rgb(51, 114, 196);">
     <div>
         <h1 style="text-align: center;">Peek-A-Book</h1>
     </div>
@@ -58,49 +59,54 @@ body {
     <div class="topnav">
         <a href="">Home</a>
         <a href="">New User Registration</a>
-        <a Class="Active">Existing User Login</a>
+        <a Class="Active">User Login</a>
        
       </div>
-      
-      <div style="padding-left:16px">
-        <h2>Sign in</h2>
-   
-      </div>
+    
     
     <!--Navbar code-->
 
-
-   
-
     <!--Creating a form here with login details-->
-    <div class="w3-container">
-    <form name="login">
-        Username<input type="text" name="userid"/>
-        Password<input type="password" name="pwd"/>
     
+    <div class="w3-container" style="margin: 50px;">
+    <form name="login" style="border: 1px solid #270707;text-align: center; padding:auto;margin: auto;width:50%;">
+      <div style="padding-left:10px">
+        <h2><u>Sign in</u></h2>
+   
+      </div>
+        <h5>Username<input type="text" name="userid" style="padding: auto; margin: 1%;font-size: 14pt;" required>
+        <br>
+        <h5>Password<input type="password" name="pwd" style="padding: auto; margin: 1%;font-size: 14pt" required>
+    <br>
     <!--Uncheck this while verifying
     <input type="button" onclick="check(this.form)" value="Login"/>
     <input type="reset" value="Cancel"/>-->
-    <input type="button" value="Login"/>
-    <input type="reset" value="Cancel"/>
+    <input type="submit" value="Login" style="margin: 3%; padding-left: 1%;width: 20%;" />
+    <input type="reset" value="Cancel" style="margin: 3%; padding-left: 1%;width: 20%;" />
+    <br>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+    <br>
+    <br>
     </form>
     </div>
 
-    <!--Javascript to verify
+    <!--Javascript to verify -->
     <script language="javascript">
     function check(form)/*function to check userid & password*/
     {
     /*the following code checkes whether the entered userid and password are matching*/
     if(form.userid.value == "myuserid" && form.pswrd.value == "mypswrd")
     {
-    window.open('target.html')/*opens the target page while Id & password matches*/
+    window.open('')/*opens the target page while Id & password matches*/
     }
     else
     {
     alert("Error Password or Username")/*displays error message*/
     }
     }
-    </script> -->
+    </script> 
 
 
     </body>
